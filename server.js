@@ -32,6 +32,12 @@ app.get('/textures/:filename', function(req, res){
   res.sendFile(path.join(__dirname, 'textures', req.params.filename))
 })
 
+app.get('/sounds/:filename', function(req, res){
+  res.header('Content-Type', 'audio/mp3')
+  console.log("filenammeme", req.params.filename)
+  res.sendFile(path.join(__dirname, 'sounds', req.params.filename))
+})
+
 
 
 // main site
