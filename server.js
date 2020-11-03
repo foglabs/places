@@ -17,6 +17,10 @@ app.get('/', function(req, res, next){
   res.header('Content-Type', 'text/html')
   res.sendFile(path.join(__dirname, 'index.html'))
 })
+app.get('/places.css', function(req, res, next){
+  res.header('Content-Type', 'text/css')
+  res.sendFile(path.join(__dirname, 'places.css'))
+})
 app.get('/lib/three.module.js', function(req, res){
   res.header('Content-Type', 'text/javascript')
   res.sendFile(path.join(__dirname, 'lib', 'three.module.js'))
