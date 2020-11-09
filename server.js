@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
 var cors = require('cors');
-
-app.use(cors());
+app.use( cors() )
+// app.options("*", cors());
 // app.use(express.static('client/build'));
 
 // include v3 folder
@@ -10,7 +10,11 @@ app.use(cors());
 
 // app.use(express.static('vr'));
 const path = require('path');
-
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next()
+})
 
 // main site
 app.get('/', function(req, res, next){
