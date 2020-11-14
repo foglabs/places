@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<div id="butt"></div>
+
+<script type="text/javascript">
+    var text = "fduck a fuyckin shit"
+    let canvas1 = document.createElement('canvas')
+    canvas1.width = 1000
+    canvas1.height = 1000
+    let context1 = canvas1.getContext('2d')
+    context1.font = "Bold 40px Arial"
+    context1.fillStyle = "rgba(0,255,255,0.95)"
+    console.log( 'text', text )
+    context1.fillText( text, 0, 50 )
+
+    document.getElementById("butt").appendChild(canvas1)
+
+
+</script>
+
+</body>
+</html>
