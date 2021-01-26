@@ -31,19 +31,24 @@ app.get('/lib/three.module.js', function(req, res){
 })
 app.get('/lib/:filename', function(req, res){
   res.header('Content-Type', 'text/javascript')
-  console.log("filenammeme", req.params.filename)
+  console.log("libbo", req.params.filename)
   res.sendFile(path.join(__dirname, 'lib', req.params.filename))
 })
 app.get('/textures/:filename', function(req, res){
   res.header('Content-Type', 'image/jpg')
-  console.log("filenammeme", req.params.filename)
+  console.log("texture", req.params.filename)
   res.sendFile(path.join(__dirname, 'textures', req.params.filename))
 })
 
 app.get('/sounds/:filename', function(req, res){
   res.header('Content-Type', 'audio/mp3')
-  console.log("filenammeme", req.params.filename)
+  console.log("sound", req.params.filename)
   res.sendFile(path.join(__dirname, 'sounds', req.params.filename))
+})
+app.get('/models/:filename', function(req, res){
+  res.header('Content-Type', 'model/gltf+json')
+  console.log("model", req.params.filename)
+  res.sendFile(path.join(__dirname, 'models', req.params.filename))
 })
 
 
