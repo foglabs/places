@@ -2,4 +2,14 @@ plant class
 generates a plantchunk
   grows according some rules
   dies according to some rules
-   
+  
+
+have a few plant base models
+  
+growing
+  add simple geo to adorn base model
+  with nurturing, increase in size
+  increase chances or more nearby
+  
+dying
+
